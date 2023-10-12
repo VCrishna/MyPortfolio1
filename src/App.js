@@ -13,7 +13,8 @@ const App = () => {
 	const [resumeData, setResumeData] = useState({});
 
 	useEffect(() => {
-		fetch("/resumeData.json")
+		// fetch("/resumeData.json")
+		fetch(process.env.PUBLIC_URL + "/resumeData.json")
 			.then((res) => res.json())
 			.then((data) => {
 				setResumeData(data);
