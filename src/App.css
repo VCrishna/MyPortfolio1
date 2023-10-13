@@ -56,3 +56,35 @@
 	object-fit: cover;
 	border-radius: 5px;
 }
+
+/* MyGallery.css */
+.my-gallery-container {
+	background-color: rgb(30, 30, 30);
+	padding: 20px; /* You can adjust padding if needed */
+}
+.my-gallery {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto auto;
+	gap: 16px;
+	padding: 20px;
+}
+
+.my-gallery img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	object-fit: cover;
+	transition: transform 0.3s;
+}
+
+.my-gallery img:hover {
+	transform: scale(1.05);
+}
+
+.my-gallery img:first-child,
+.my-gallery img:last-child {
+	grid-column: span 3; /* This makes the first and last images take up the entire width */
+}

@@ -7,13 +7,14 @@ import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 
+import MyGallery from "./Components/MyGallery";
+
 import "./App.css";
 
 const App = () => {
 	const [resumeData, setResumeData] = useState({});
 
 	useEffect(() => {
-		// console.log("PUBLIC URL->", process.env.PUBLIC_URL);
 		fetch(process.env.PUBLIC_URL + "/resumeData.json")
 			.then((res) => res.json())
 			.then((data) => {
@@ -27,6 +28,7 @@ const App = () => {
 			<About data={resumeData.main} />
 			<Resume data={resumeData.resume} />
 			<Portfolio data={resumeData.portfolio} />
+			<MyGallery />
 			<Contact data={resumeData.main} />
 			<Footer data={resumeData.main} />
 		</div>

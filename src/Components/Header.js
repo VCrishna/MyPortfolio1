@@ -49,7 +49,11 @@ const Header = ({ data }) => {
 							My Projects
 						</a>
 					</li>
-
+					<li>
+						<a className="smoothscroll" href="#MyGallery">
+							My Gallery
+						</a>
+					</li>
 					<li>
 						<a className="smoothscroll" href="#contact">
 							Contact
