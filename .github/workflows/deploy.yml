@@ -17,8 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Clean build directory
-        run: rm -rf build
+
       - name: Install dependencies and build
         run: |
           npm install
